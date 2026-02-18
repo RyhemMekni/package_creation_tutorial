@@ -4,14 +4,28 @@ version = "0.1.0"
 description = "A tutorial package for string operations"
 authors = ["Ryhem Mekni <rihemmekni6@gmail.com>"]
 readme = "README.md"
+packages = [{include = "package_creation_tutorial", from = "src"}]
 homepage = "https://github.com/RyhemMekni/package_creation_tutorial"
 repository = "https://github.com/RyhemMekni/package_creation_tutorial"
 documentation = "https://rhemmekni.github.io/package_creation_tutorial/"
 keywords = ["string", "tutorial", "operations"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^6.0.0"
+ruff = "^0.8.0"
+pre-commit = "^4.0.0"
+sphinx = "^7.0.0"
+sphinx-rtd-theme = "^3.0.0"
+
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
